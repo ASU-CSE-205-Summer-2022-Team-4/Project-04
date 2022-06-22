@@ -12,4 +12,20 @@
 /**
  * Represents the multiplication operator which is a specific type of binary operator.
  */
-???
+public class MultOperator extends BinaryOperator {
+    public MultOperator() {
+        
+    }
+    
+    public Operand evaluate(Operand pLhsOperand, Operand pRhsOperand) {
+        return new Operand(pLhsOperand.getValue() * pRhsOperand.getValue());
+    }
+    
+    public int precedence() {
+      return 3;
+    }
+    
+    public int stackPrecedence() {
+        return 3;
+    }
+}

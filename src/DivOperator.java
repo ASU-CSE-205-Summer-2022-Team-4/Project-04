@@ -12,4 +12,20 @@
 /**
  * Represents the division operator which is a specific type of binary operator.
  */
-???
+public class DivOperator extends BinaryOperator {
+    public DivOperator() {
+        
+    }
+    
+    public Operand evaluate(Operand pLhsOperand, Operand pRhsOperand) {
+        return new Operand(pLhsOperand.getValue() / pRhsOperand.getValue());
+    }
+    
+    public int precedence() {
+      return 3;
+    }
+    
+    public int stackPrecedence() {
+      return 3;
+    }
+}

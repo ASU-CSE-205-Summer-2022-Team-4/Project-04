@@ -12,4 +12,20 @@
 /**
  * Represents the negation operator which is a specific type of unary operator.
  */
-???
+public class NegOperator extends UnaryOperator {
+    public NegOperator() {
+        
+    }
+    
+    public Operand evaluate(Operand pOperand) {
+        return new Operand(pOperand.getValue() * -1);
+    }
+    
+    public int precedence() {
+      return 4;
+    }
+    
+    public int stackPrecedence() {
+      return 4;
+    }
+}
